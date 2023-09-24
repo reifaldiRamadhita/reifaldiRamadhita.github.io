@@ -33,7 +33,7 @@ export const Certificate = ({ elCertificate }) => {
       className="relative h-fit w-full px-8 md:px-10 lg:min-h-screen lg:px-20"
     >
       {/* title */}
-      <div className="absolute top-20 h-fit w-fit overflow-hidden md:left-16 md:top-16 lg:left-28">
+      <div className="absolute right-8 top-20 h-fit w-fit overflow-hidden md:left-16 md:top-16 lg:left-28">
         <h1
           className="pr-12 text-end font-poiret text-5xl font-bold text-gray-900 dark:text-gray-200 md:text-6xl lg:text-7xl"
           data-aos="fade-left"

@@ -16,7 +16,7 @@ export const Project = ({ elProject }) => {
       className="relative h-fit w-full py-16 md:px-10 lg:min-h-screen lg:px-20"
     >
       {/* title */}
-      <div className="absolute left-8 top-20 h-fit w-fit overflow-hidden pb-3 md:left-16 lg:left-32">
+      <div className="absolute right-8 top-20 h-fit w-fit overflow-hidden pb-3 md:left-16 lg:left-32">
         <h1 className="pr-12 text-end font-poiret text-5xl font-bold text-gray-900 dark:text-gray-200 md:text-6xl lg:text-7xl">
           My Project
         </h1>
@@ -65,7 +65,7 @@ export const Project = ({ elProject }) => {
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
             >
-              <p className="mb-1 text-end text-base text-gray-700 dark:text-gray-400 md:text-lg">
+              <p className="mb-1 text-end text-sm text-gray-700 dark:text-gray-400 md:text-lg">
                 HTML
               </p>
             </li>
@@ -75,7 +75,7 @@ export const Project = ({ elProject }) => {
               data-aos-easing="ease-in-out"
               data-aos-delay="100"
             >
-              <p className="mb-1 text-end text-base text-gray-700 dark:text-gray-400 md:text-lg">
+              <p className="mb-1 text-end text-sm text-gray-700 dark:text-gray-400 md:text-lg">
                 CSS
               </p>
             </li>
@@ -85,7 +85,7 @@ export const Project = ({ elProject }) => {
               data-aos-easing="ease-in-out"
               data-aos-delay="200"
             >
-              <p className="mb-1 text-end text-base text-gray-700 dark:text-gray-400 md:text-lg">
+              <p className="mb-1 text-end text-sm text-gray-700 dark:text-gray-400 md:text-lg">
                 Javascript
               </p>
             </li>
@@ -95,7 +95,7 @@ export const Project = ({ elProject }) => {
               data-aos-easing="ease-in-out"
               data-aos-delay="300"
             >
-              <p className="mb-1 text-end text-base text-gray-700 dark:text-gray-400 md:text-lg">
+              <p className="mb-1 text-end text-sm text-gray-700 dark:text-gray-400 md:text-lg">
                 Tailwind CSS
               </p>
             </li>
@@ -105,12 +105,12 @@ export const Project = ({ elProject }) => {
               data-aos-easing="ease-in-out"
               data-aos-delay="400"
             >
-              <p className="mb-1 text-end text-base text-gray-700 dark:text-gray-400 md:text-lg">
+              <p className="mb-1 text-end text-sm text-gray-700 dark:text-gray-400 md:text-lg">
                 React JS
               </p>
             </li>
           </ul>
-          <div className="w-1/3 bg-[#252a2f] p-2 shadow-xl shadow-gray-400 dark:shadow-gray-900 md:w-1/4 md:p-14">
+          <div className="z-10 w-1/3 bg-[#252a2f] p-2 shadow-xl shadow-gray-400 dark:shadow-gray-900 md:w-1/4 md:p-14">
             <img
               src={imgCoffeeHp}
               alt="img-coffee-hp"
@@ -123,7 +123,7 @@ export const Project = ({ elProject }) => {
           href="https://github.com/reifaldiRamadhita/coffee-shop"
           target="_blank"
           rel="noopener noreferrer"
-          className="mx-auto mt-14 block w-28 scale-90 bg-gradient-to-br from-gray-900 to-cyan-500 py-3 text-center text-lg font-bold text-gray-100 shadow-lg dark:from-gray-800 dark:to-cyan-500 md:mt-32 md:scale-100"
+          className="mx-auto mt-14 block w-28 scale-90 bg-cyan-950 py-3 text-center text-lg font-bold text-gray-100 shadow-lg dark:bg-cyan-900 md:mt-32 md:scale-100"
         >
           View
         </a>

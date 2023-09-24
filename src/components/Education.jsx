@@ -40,7 +40,7 @@ export const Education = ({ elEducation }) => {
 
         {/* sma */}
         <div className="z-10 flex scale-75 flex-col items-center bg-gray-100 dark:bg-gray-900 md:scale-100">
-          <div className="flex h-36 w-36 scale-90 items-center justify-center rounded-full border-2 border-gray-700 bg-gray-100 p-5 dark:border-gray-400 dark:bg-gray-900 md:scale-100">
+          <div className="flex h-36 w-36 scale-90 items-center justify-center rounded-full border-2 border-gray-700 bg-gray-100 p-5 shadow-xl shadow-gray-300 dark:border-gray-400 dark:bg-gray-900 dark:shadow-gray-900 md:scale-100">
             <img src={imgSMA} alt="logo-sma" className="object-cover" />
           </div>
           <p className="mt-4 truncate text-center text-lg text-gray-900 dark:text-gray-200 md:mt-8">
@@ -51,7 +51,7 @@ export const Education = ({ elEducation }) => {
         <span className="absolute bottom-[60%] mb-7 inline-block h-0.5 w-[17%] rotate-90 bg-gray-900 dark:bg-gray-400 md:bottom-1/2 md:left-[24%] md:rotate-0"></span>
         {/* smp */}
         <div className="z-10 flex scale-75 flex-col items-center bg-gray-100 dark:bg-gray-900 md:scale-100">
-          <div className="flex h-36 w-36 scale-90 items-center justify-center rounded-full border-2 border-gray-700 bg-gray-100 p-8 dark:border-gray-400 dark:bg-gray-900 md:scale-100">
+          <div className="flex h-36 w-36 scale-90 items-center justify-center rounded-full border-2 border-gray-700 bg-gray-100 p-8 shadow-xl shadow-gray-300 dark:border-gray-400 dark:bg-gray-900 dark:shadow-gray-900 md:scale-100">
             <img src={imgSMP} alt="logo-sma" className="object-cover" />
           </div>
           <p className="mt-4 truncate text-center text-lg text-gray-900 dark:text-gray-200 md:mt-8">
@@ -62,7 +62,7 @@ export const Education = ({ elEducation }) => {
         <span className="absolute bottom-[26%] right-[41%] mb-7 inline-block h-0.5 w-[19%] rotate-90 bg-gray-900 dark:bg-gray-400 md:bottom-1/2 md:right-1/4 md:rotate-0"></span>
         {/* sd */}
         <div className="z-10 flex scale-75 flex-col items-center bg-gray-100 dark:bg-gray-900 md:scale-100">
-          <div className="flex h-36 w-36 scale-90 items-center justify-center rounded-full border-2 border-gray-700 bg-gray-100 p-7 dark:border-gray-400 dark:bg-gray-900 md:scale-100">
+          <div className="flex h-36 w-36 scale-90 items-center justify-center rounded-full border-2 border-gray-700 bg-gray-100 p-7 shadow-xl shadow-gray-300 dark:border-gray-400 dark:bg-gray-900 dark:shadow-gray-900 md:scale-100">
             <img src={imgSD} alt="logo-sma" className="object-cover" />
           </div>
           <p className="mt-4 truncate text-center text-lg text-gray-900 dark:text-gray-200 md:mt-8">

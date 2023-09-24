@@ -24,7 +24,7 @@ export const Skill = ({ elSkill }) => {
 
       ScrollTrigger.create({
         trigger: racesWrapper,
-        start: "top 20%",
+        start: "top top",
         end: () => `+=${(getScrollAmount() / 2) * -1}`,
         pin: true,
         pinnedContainer: racesWrapper,
@@ -40,8 +40,8 @@ export const Skill = ({ elSkill }) => {
   }, []);
 
   return (
-    <section ref={elSkill} className="relative h-fit w-full">
-      <div className="mx-auto w-[85%] pt-20">
+    <section ref={elSkill} className="relative h-fit w-full pt-20">
+      <div className="mx-auto w-[85%]">
         {/* title */}
         <div className="absolute top-20 h-fit w-fit overflow-hidden md:left-16 md:top-16 lg:left-28">
           <h1
@@ -50,7 +50,7 @@ export const Skill = ({ elSkill }) => {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
-            Certificate
+            Skill
           </h1>
           <div className="absolute -top-[2px] right-0 bg-gray-100 dark:bg-gray-900">
             <p className="bg-gradient-to-br from-gray-900 to-cyan-500 bg-clip-text text-7xl text-transparent">
@@ -60,7 +60,10 @@ export const Skill = ({ elSkill }) => {
         </div>
 
         {/* main */}
-        <div id="racesWrapper" className="mt-20 overflow-hidden md:mt-36">
+        <div
+          id="racesWrapper"
+          className="flex min-h-screen w-fit items-center overflow-hidden"
+        >
           <div className="races flex h-fit w-fit flex-nowrap gap-x-0 md:gap-x-32">
             <div className="hidden h-96 w-[250px] md:block"></div>
 

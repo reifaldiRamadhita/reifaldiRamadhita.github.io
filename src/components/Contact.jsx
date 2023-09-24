@@ -156,7 +156,7 @@ export const Contact = ({ elContact }) => {
           <div className="absolute hidden h-fit w-fit -rotate-90 items-center md:bottom-1/3 md:left-2/3 md:flex lg:-left-[16%] lg:top-1/2">
             <span className="inline-block h-1 bg-gradient-to-br from-cyan-500 to-gray-900 md:w-[25vh] lg:w-[50vh]"></span>
             <span className="truncate pl-4 text-gray-900 dark:text-gray-400">
-              Contact Me
+              Social Media
             </span>
           </div>
           <div className="mt-20 h-full w-full md:ml-0 md:mt-0 lg:ml-28">

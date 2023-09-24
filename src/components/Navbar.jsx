@@ -8,6 +8,7 @@ export const Navbar = ({ handleGoToSection }) => {
   const btnMenu = useRef(null);
   const html = document.querySelector("html");
   const navbar = useRef(null);
+  const progresScoll = useRef(null);
 
   const handleShowMenu = () => {
     setShowMenu(!showMenu);
@@ -35,13 +36,6 @@ export const Navbar = ({ handleGoToSection }) => {
     document.documentElement.classList.remove("dark");
   }
 
-  // visible/invisible background navbar
-  window.onscroll = () => {
-    window.scrollY > 0
-      ? (navbar.current.style = "backdrop-filter: blur(16px);")
-      : (navbar.current.style = "backdrop-filter: blur(0);");
-  };
-
   window.onclick = (e) => {
     const overlay = document.querySelector("#overlay");
     if (e.target === overlay) {
@@ -49,48 +43,82 @@ export const Navbar = ({ handleGoToSection }) => {
     }
   };
 
+  // progresBar
+  function progressBarScroll() {
+    let winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop,
+      height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight,
+      scrolled = (winScroll / height) * 100;
+
+    progresScoll.current.style.width = `${scrolled}%`;
+    progresScoll.current.style.height = "2px";
+  }
+
+  window.onscroll = function () {
+    progressBarScroll();
+
+    // visible/invisible background navbar
+    window.scrollY > 0
+      ? (navbar.current.style = "backdrop-filter: blur(50px);")
+      : (navbar.current.style = "backdrop-filter: blur(0);");
+  };
+
   return (
     <>
       <section
         ref={navbar}
-        className="fixed left-0 top-0 z-50 flex h-16 w-full items-center justify-between px-8 md:px-16 lg:px-32"
+        className="fixed left-0 top-0 z-50 flex h-fit w-full flex-col justify-between"
       >
-        {/* title */}
-        <div className="flex h-full w-fit items-center">
-          <img src={logoR} alt="logo-portfolio" className="h-12 w-12" />
-          <p className="ml-1 text-2xl text-gray-400">Portfolio</p>
+        <div className="flex h-16 items-center justify-between px-8 md:px-16 lg:px-32">
+          {/* title */}
+          <div className="flex h-full w-fit items-center">
+            <img
+              src={logoR}
+              alt="logo-portfolio"
+              className="h-11 w-11 md:h-12 md:w-12"
+            />
+            <p className="ml-1 text-xl text-gray-400 md:text-2xl">Portfolio</p>
+          </div>
+          {/* button */}
+          <label
+            ref={btnMenu}
+            htmlFor="menu"
+            className="relative flex h-fit w-fit scale-75 cursor-pointer items-center justify-evenly gap-x-2 py-4 md:scale-100"
+          >
+            <span
+              style={
+                showMenu
+                  ? { backgroundColor: "#22c55e", transitionDelay: "200ms" }
+                  : {}
+              }
+              className="block h-4 w-4 cursor-pointer rounded-full border-2 border-green-400 delay-100"
+            ></span>
+            <span
+              style={
+                showMenu
+                  ? { backgroundColor: "#eab308", transitionDelay: "100ms" }
+                  : {}
+              }
+              className="block h-4 w-4 cursor-pointer rounded-full border-2 border-yellow-400 delay-200"
+            ></span>
+            <span className="block h-4 w-4 cursor-pointer rounded-full border-2 border-red-400 bg-red-500"></span>
+          </label>
+          <input
+            type="checkbox"
+            onClick={handleShowMenu}
+            id="menu"
+            value={showMenu}
+            className="hidden"
+          />
         </div>
-        {/* button */}
-        <label
-          ref={btnMenu}
-          htmlFor="menu"
-          className="relative flex h-fit w-fit cursor-pointer items-center justify-evenly gap-x-2 py-4"
-        >
-          <span
-            style={
-              showMenu
-                ? { backgroundColor: "#22c55e", transitionDelay: "200ms" }
-                : {}
-            }
-            className="block h-4 w-4 cursor-pointer rounded-full border-2 border-green-400 delay-100"
-          ></span>
-          <span
-            style={
-              showMenu
-                ? { backgroundColor: "#eab308", transitionDelay: "100ms" }
-                : {}
-            }
-            className="block h-4 w-4 cursor-pointer rounded-full border-2 border-yellow-400 delay-200"
-          ></span>
-          <span className="block h-4 w-4 cursor-pointer rounded-full border-2 border-red-400 bg-red-500"></span>
-        </label>
-        <input
-          type="checkbox"
-          onClick={handleShowMenu}
-          id="menu"
-          value={showMenu}
-          className="hidden"
-        />
+
+        {/* progres scroll */}
+        <div
+          ref={progresScoll}
+          className="flex items-center justify-end bg-cyan-500"
+        ></div>
       </section>
 
       {/* list menu */}

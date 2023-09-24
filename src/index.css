@@ -7,5 +7,5 @@
 }
 
 #animateOpening h3 {
-  @apply absolute flex h-screen w-screen items-center justify-center bg-cyan-950 text-center font-poiret text-5xl text-white;
+  @apply absolute flex h-screen w-screen items-center justify-center bg-cyan-950 text-center font-poiret text-4xl text-white;
 }

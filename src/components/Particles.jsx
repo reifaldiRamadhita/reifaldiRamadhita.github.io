@@ -22,7 +22,7 @@ export const Particels = () => {
             },
           },
           color: {
-            value: "#0891b2",
+            value: "#4b5563",
           },
           shape: {
             type: "circle",
@@ -62,7 +62,7 @@ export const Particels = () => {
           line_linked: {
             enable: true,
             distance: 150,
-            color: "#06b6d4",
+            color: "#4b5563",
             opacity: 0.8,
             width: 1,
           },

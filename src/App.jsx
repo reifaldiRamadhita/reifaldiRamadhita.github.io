@@ -135,7 +135,7 @@ function App() {
   };
 
   return (
-    <div ref={wrapper} className="relative">
+    <div ref={wrapper} className="relative overflow-x-hidden">
       <div
         ref={opening}
         className="fixed left-0 top-0 z-[999] flex h-screen w-screen items-center justify-center overflow-hidden bg-cyan-950"

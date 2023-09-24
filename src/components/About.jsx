@@ -18,7 +18,7 @@ export const About = ({ elAbout }) => {
   return (
     <section
       ref={elAbout}
-      className="relative flex items-center px-8 pt-20 dark:bg-gray-900 md:h-fit md:px-16 md:py-20 md:pt-0 lg:min-h-screen lg:px-32 lg:py-0"
+      className="relative flex items-center px-8 py-20 dark:bg-gray-900 md:h-fit md:px-16 md:py-20 md:pt-0 lg:min-h-screen lg:px-32 lg:py-0"
     >
       <div className="flex flex-col md:ml-10 md:items-center lg:ml-20 lg:flex-row">
         <div className="z-10 w-44 md:w-64 lg:w-96">
